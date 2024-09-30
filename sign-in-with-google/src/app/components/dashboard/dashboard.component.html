@@ -1,14 +1,20 @@
-<h2>User logged in successfully</h2>
-<br />
-@if (userProfile) {
-<ng-container>
-  <div>Welcome, {{ userProfile.name }}</div>
-  <app-user-card [userProfile]="userProfile"></app-user-card>
-</ng-container>
-}
-<!-- <ng-container *ngIf="userProfile">
-  <div>Welcome, {{ userProfile.name }}</div>
-  <app-user-card [userProfile]="userProfile"></app-user-card>
-</ng-container> -->
+<div class="container">
+  <h2>User logged in successfully</h2>
 
-<button id="signout-button" (click)="handleSignOut()">Sign Out</button>
+  @if (userProfile) {
+  <ng-container>
+    <mat-label>Welcome,{{ userProfile.name }}</mat-label>
+    <app-user-card [userProfile]="userProfile"></app-user-card>
+  </ng-container>
+  }
+
+  <button
+    mat-flat-button
+    class="center"
+    color="primary"
+    id="signout-button"
+    (click)="handleSignOut()"
+  >
+    Sign Out
+  </button>
+</div>
