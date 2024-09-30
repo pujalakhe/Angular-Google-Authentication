@@ -3,9 +3,17 @@
     <img [src]="userProfile.picture" alt="Profile Photo" />
   </div>
   <div class="user-info">
-    <!-- <h2>{{ userProfile.given_name }} {{ userProfile.family_name }}</h2> -->
     <h2>{{ userProfile.name }}</h2>
     <p>{{ userProfile.email }}</p>
     <p>ID: {{ userProfile.sub }}</p>
+    <span
+      >Send an email
+      <a
+        href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=new"
+        target="_blank"
+      >
+        <i class="fa fa-envelope"></i
+      ></a>
+    </span>
   </div>
 </div>
