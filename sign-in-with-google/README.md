@@ -19,6 +19,8 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The appli
   https://developers.google.com/identity/gsi/web/guides/get-google-api-clientid
 
 ## User Interface
+  
+https://github.com/user-attachments/assets/a2baa748-4e6d-4a71-89f3-71634211c4b2
 
 ## Code scaffolding
 
