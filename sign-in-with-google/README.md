@@ -6,6 +6,19 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
+## Install Packages
+
+    npm i
+
+## Links to google console
+
+- Google developer console:
+  https://console.cloud.google.com/welcome/new?pli=1
+- Integrating Google Sign-In into your web app:
+  https://developers.google.com/identity/gsi/web/guides/get-google-api-clientid
+
+## User Interface
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
