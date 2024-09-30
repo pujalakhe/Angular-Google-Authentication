@@ -2,27 +2,39 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+
     <title>SignInWithGoogle</title>
     <base href="/" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="https://accounts.google.com/gsi/client" async></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
     <script>
+      // Decode JWT Token
       function decodeJWTToken(token) {
         return JSON.parse(atob(token.split(".")[1]));
       }
+      // Handle the response when a user signs in
       function handleCredentialResponse(response) {
         // to decode the credential response.
         const responsePayload = decodeJWTToken(response.credential);
         sessionStorage.setItem("loggedInUser", JSON.stringify(responsePayload));
         window.location.href = "/dashboard";
       }
+      // Sign out handler
       function handleSignout() {
         google.accounts.id.disableAutoSelect();
       }
     </script>
     <link rel="icon" type="image/x-icon" href="assets/puja-lakhe-logo.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
   </head>
-  <body>
+  <body class="mat-typography">
     <app-root></app-root>
   </body>
 </html>
