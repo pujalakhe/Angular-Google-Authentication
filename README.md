@@ -1,105 +1,121 @@
-Run Backend Server: node server.js
-Google Sign-In Integration with Angular
-Introduction
-This project demonstrates how to integrate Google Sign-In into an Angular application. It leverages Google's OAuth 2.0 API to allow users to securely authenticate using their Google accounts. The implementation ensures seamless login experiences and helps in managing user sessions effectively within Angular applications.
 
-Table of Contents
-Installation
+# Google Sign-In Integration with Angular
 
-Usage
+![Angular](https://img.shields.io/badge/Angular-Framework-red)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-Features
+## Introduction
 
-Dependencies
+This project demonstrates the integration of **Google Sign-In** with an **Angular** application.  
+It uses **Google's OAuth 2.0 API** to allow users to authenticate and log in via their Google accounts.  
+The implementation ensures secure and seamless authentication, making it easy to manage user sessions in Angular applications.
 
-Configuration
+---
 
-Documentation
+## Table of Contents
 
-Examples
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Dependencies](#dependencies)
+- [Configuration](#configuration)
+- [Documentation](#documentation)
 
-Troubleshooting
+- [License](#license)
 
-Contributors
+---
 
-License
+## Installation
 
-Installation
-Clone the repository:
+1. **Clone the repository**
 
-bash
-Copy
-Edit
-git clone https://github.com/yourusername/angular-google-signin.git
-cd angular-google-signin
-Install dependencies:
+    ```bash
+    git clone https://github.com/yourusername/angular-google-signin.git
+    cd angular-google-signin
+    ```
 
-bash
-Copy
-Edit
-npm install
-Set up Google API credentials:
+2. **Install project dependencies**
 
-Go to the Google Cloud Console.
+    ```bash
+    npm install
+    ```
 
-Create a new project (or select an existing one).
+3. **Set up Google API credentials**
+    - Go to the [Google Cloud Console](https://console.cloud.google.com/).
+    - Create a new project (or select an existing one).
+    - Enable the **Google Identity Services API**.
+    - Create OAuth 2.0 Client ID credentials.
+    - Configure the **Authorized JavaScript Origins** (e.g., `http://localhost:4200`).
 
-Enable the Google Sign-In API.
+4. **Configure the environment variables**
 
-Create OAuth 2.0 Client ID credentials.
+    Update `src/environments/environment.ts`:
 
-Add your app's authorized domains and get your Client ID.
+    ```typescript
+    export const environment = {
+      production: false,
+      googleClientId: 'YOUR_GOOGLE_CLIENT_ID_HERE'
+    };
+    ```
 
-Update environment configuration: In your Angular environment files (environment.ts and environment.prod.ts), add:
+---
 
-typescript
-Copy
-Edit
-export const environment = {
-  production: false,
-  googleClientId: 'YOUR_GOOGLE_CLIENT_ID'
-};
-Usage
-Start the development server:
+## Usage
 
-bash
-Copy
-Edit
-ng serve
-Open your browser and navigate to http://localhost:4200/.
+1. **Start the development server**
 
-Click on the "Sign in with Google" button to authenticate.
+    ```bash
+    ng serve
+    ```
 
-Features
-Secure OAuth 2.0 authentication with Google accounts.
+2. **Access the application**
 
-Session management with automatic token renewal.
+    Open your browser at:
 
-Easy integration with Angular services and components.
+    ```
+    http://localhost:4200/
+    ```
 
-Error handling for login/logout flows.
+3. **Sign in**
 
-Dependencies
-Angular (vXX - specify your version)
+    Click the "Sign in with Google" button to authenticate via Google.
 
-@abacritt/angularx-social-login (or similar library, if used)
+---
 
-Google APIs
+## Features
 
-(Please specify if you're using any additional libraries.)
+- OAuth 2.0 authentication via Google.
+- User profile retrieval after successful sign-in.
+- Token management and session handling.
+- Easy-to-integrate Angular service for authentication flow.
+- Error handling during login and logout.
 
-Configuration
-Ensure the following settings:
+---
 
-The OAuth consent screen is set up correctly.
+## Dependencies
 
-Your app’s domain is authorized in Google API Console.
+- [Angular](https://angular.io/) (vXX - specify the version you used)
+- [@abacritt/angularx-social-login](https://www.npmjs.com/package/@abacritt/angularx-social-login) (or equivalent)
+- [Google Identity Services](https://developers.google.com/identity/gsi/web/guides/overview)
 
-The Client ID is correctly configured in your Angular environment.
+---
 
-Documentation
-For detailed guidance:
+## Configuration
 
-Google Identity Platform Documentation
+- Ensure your Google Cloud project has the **Google Identity Services API** enabled.
+- Your app's **Authorized JavaScript Origins** must match your development and production URLs.
+- Double-check your Client ID and environment configurations.
 
-Angular Official Documentation
+---
+
+## Documentation
+
+- [Google Identity Platform Documentation](https://developers.google.com/identity)
+- [Angular Documentation](https://angular.io/docs)
+
+---
+
+## Run Backend Server
+node server.js
+
+
